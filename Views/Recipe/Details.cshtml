@@ -1,0 +1,59 @@
+﻿@model Recipe
+@{
+    ViewBag.Title = "Recipe Details";
+}
+
+<div>
+    <img src="~/images/RecipiesLogo2.png" id="logo2" />
+    <a asp-controller="Home" asp-action="Index" id="BackBtn" class="btn btn-outline-dark">Back</a>
+</div>
+
+<div class="detailContainer">
+
+    <div class="grid__item title">
+        <input asp-for="Name" readonly class="form-control-plaintext" id="recipeDetailsTitle" />
+    </div>
+
+    <div class="grid__item image">
+        <img src="~/images/@ViewBag.imageFilename" id="recipeDetailsImage" />
+    </div> 
+
+<div class="grid__item author">
+    <td colspan="2">
+        <div style="float:left; width:80px">
+            <label id="authorLabel">Author</label>
+        </div>
+
+        <div style="float: left; width:300px">
+            <input asp-for="Author" readonly class="form-control-plaintext" id="recipeDetailsAuthor" />
+        </div>
+    </td>
+</div>
+
+    <div class="grid__item prepTime">
+        <label id="prepTimeLabel">Prep Time</label>
+        <input asp-for="PrepTime" readonly class="form-control-plaintext" id="recipeDetailsPrepTime" />
+    </div>
+
+    <div class="grid__item totalTime">
+        <label id="totalTimeLabel">Total Time</label>
+        <input asp-for="TotalTime" readonly class="form-control-plaintext" id="recipeDetailsTotalTime" />
+    </div>
+
+    <div class="grid__item servings">
+        <label id="servingsLabel">Servings</label>
+        <input asp-for="Servings" readonly class="form-control-plaintext" id="recipeDetailsServings" />
+    </div>
+
+    <div class="grid__item ingredients">
+        <label id="ingredientsLabel">Ingredients</label>
+        <input name="ingredients" asp-for="Ingredients" readonly class="form-control-plaintext" id="ingredientParagraph" />
+    </div>
+
+    <div class="grid__item directions">
+        <label id="directionsLabel">Directions</label>
+        <input name="directions" asp-for="Directions" readonly class="form-control-plaintext" id="directionParagraph" />
+    </div>
+
+
+</div>

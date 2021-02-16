@@ -1,0 +1,21 @@
+﻿@model List<Recipe>
+@{
+    ViewBag.Title = "Recipies";
+}
+
+<div>
+    <img src="~/images/RecipiesLogo2.png" id="logo"/>
+    <a asp-controller="Recipe" asp-action="Add" id="AddNew"class="btn btn-outline-dark">Add New Recipe</a>
+</div>
+
+<div class="container" id="recipies">
+    <div class="row">
+        @foreach (var recipe in Model)
+        {
+        <div class="col-sm-4">
+            <a href="@Url.Action("Details", "Recipe", new { id = recipe.RecipeId })" title="Details"><img src="~/images/@recipe.Image" id="recipeHome" /></a>                          
+            <p id="recipeTitle">@recipe.Name</p>
+        </div>
+        }
+    </div>
+</div>

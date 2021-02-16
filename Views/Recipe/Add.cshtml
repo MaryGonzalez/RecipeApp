@@ -1,0 +1,81 @@
+﻿@model Recipe
+@{
+    ViewBag.Title = "Add";
+}
+<div>
+    <img src="~/images/RecipiesLogo2.png" id="logo2" />
+    <a asp-controller="Home" asp-action="Index" id="BackBtn" class="btn btn-outline-dark">Cancel</a>
+</div>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-action="Add" class="addNewRecipe">
+    <div class="form-row">
+
+        @*Recipe Name*@
+        <div class="form-group col-md-4">
+            <label for="@Model.Name">Name</label>
+            <input type="text" class="form-control" id="RecipeName">
+        </div>
+
+        @*Recipe Author*@
+        <div class="form-group col-md-4">
+            <label for="@Model.Author">Author</label>
+            <input type="text" class="form-control" id="RecipeAuthor">
+        </div>
+
+
+        @*Recipe Image*@
+        <div class="form-group col-md-4">
+            <label for="@Model.Image">Image</label>
+            <input type="file" class="form-control-file" id="RecipeImage">
+        </div>
+    </div>
+
+    <div class="form-row">
+        @*Recipe PrepTime*@
+        <div class="form-group col-md-3">
+            <label for="@Model.PrepTime">Prep Time</label>
+            <input type="text" class="form-control" id="RecipePrepTime">
+        </div>
+
+        @*Recipe TotalTime*@
+        <div class="form-group col-md-3">
+            <label for="@Model.TotalTime">Total Time</label>
+            <input type="text" class="form-control" id="RecipeTotalTime">
+        </div>
+
+        @*Recipe Servings*@
+        <div class="form-group col-md-2">
+            <label for="@Model.Servings">Servings</label>
+            <input type="text" class="form-control" id="RecipeServings">
+        </div>
+
+
+        @*Recipe Category*@
+        <div class="form-group col-md-4">
+            <label for="@Model.Category">Select a Category</label>
+            <select class="form-control" id="FormControlSelect">
+                <option></option>
+                <option>Breakfast</option>
+                <option>Dessert</option>
+                <option>Main Dishes-Meat</option>
+                <option>Main Dishes-Vegetarian</option>
+            </select>
+        </div>
+    </div>
+
+    @*Recipe Ingredients*@
+    <div class="form-group">
+        <label for="@Model.Ingredients">Ingredients</label>
+        <p style="font-size:13px;">Separate each ingredient with a comma</p>
+        <textarea class="form-control" id="RecipeIngredients" rows="9"></textarea>
+    </div>
+
+    @*Recipe Directions*@
+    <div class="form-group">
+        <label for="@Model.Directions">Directions</label>
+        <textarea class="form-control" id="RecipeDirections" placeholder="1.&#10;2.&#10;3.&#10;4.&#10;" rows="15"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

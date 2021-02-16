@@ -1,0 +1,289 @@
+﻿/***************/
+/***Home Page***/
+/***************/
+recipeHome {
+    width: 300px;
+}
+
+#logo {
+    position: relative;
+    left: 310px;
+    margin-bottom: 80px;
+    margin-top: 40px;
+    width: 450px;
+}
+
+#recipeTitle {
+    font-family: lucida console;
+    font-size: 13px;
+}
+
+#AddNew {
+    position: absolute;
+    right: 120px;
+    top: 50px;
+    margin-top: 35px;
+}
+
+#recipies{
+    margin-bottom: 120px;
+}
+
+/*****************/
+/*New Recipe Page*/
+/*****************/
+
+.addNewRecipe {
+    margin-bottom: 120px;
+}
+
+/**************/
+/*Details Page*/
+/**************/
+
+
+#logo2 {
+    position: relative;
+    left: 310px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    width: 450px;
+}
+
+#BackBtn {
+    position: absolute;
+    right: 80px;
+    top: 50px;
+    margin-top: 35px;
+}
+
+#recipeDetailsImage{
+    width: 300px;
+    margin-left:100px;
+}
+
+
+
+/*Recipe Title*/
+#recipeDetailsTitle {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+/*Author label*/
+#authorLabel {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    height: 38px;
+    margin: 0px 0px 0px 35px;
+    padding: 6px 2px;
+}
+/*Author input*/
+#recipeDetailsAuthor {
+    font-size: 16px;
+    text-align: center;
+    margin-left: -25px;
+}
+
+/*PrepTime label*/
+#prepTimeLabel {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+}
+
+/*PrepTime input*/
+#recipeDetailsPrepTime {
+    font-size: 16px;
+    text-align: center;
+}
+
+/*TotalTime label*/
+#totalTimeLabel {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+}
+
+/*TotalTime input*/
+#recipeDetailsTotalTime {
+    font-size: 16px;
+    text-align: center;
+}
+
+/*Servings label*/
+#servingsLabel {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+}
+
+/*Servings input*/
+#recipeDetailsServings {
+    font-size: 16px;
+    text-align: center;
+}
+
+/*Ingredients label*/
+#ingredientsLabel {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;    
+}
+
+/*Ingredients input*/
+#ingredientParagraph {
+    width: 700px;
+    word-wrap:break-word;
+}
+
+/*Directions label*/
+#directionsLabel {
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Directions input*/
+#directionParagraph {
+    word-wrap: break-word;
+}
+
+
+
+/***Grid Containers***/
+.detailContainer {
+    margin: 40px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15ch, 1fr));
+    grid-gap: 1em;
+}
+.grid__item {
+    /*background-color: lightgrey;*/
+    /*padding: 1em;*/
+}
+
+.title {
+    grid-row: span 1;
+    grid-column: span 3;
+    height: 60px;
+}
+
+
+.image {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.author {
+    grid-row: span 1;
+    grid-column: span 3;
+}
+
+.prepTime{
+    grid-row: span 1;
+    grid-column: span 1;
+    height: 76px;
+}
+
+.totalTime {
+    grid-row: span 1;
+    grid-column: span 1;
+    height: 76px;
+}
+.servings {
+    grid-row: span 1;
+    grid-column: span 1;
+    height: 76px;
+}
+
+.ingredients {
+    grid-row: span 15;
+    grid-column: span 6;
+}
+
+.directions{
+    grid-row: span 15;
+    grid-column: span 6;
+}
+
+
+
+
+
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
